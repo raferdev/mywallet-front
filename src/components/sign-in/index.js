@@ -1,5 +1,5 @@
 import "./styles.css";
-export default function Login() {
+export default function SignIn() {
   return (
     <>
       <h1>MyWallet</h1>

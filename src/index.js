@@ -1,18 +1,29 @@
 import reactDom from "react-dom";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Login from "./components/login";
-import Root from "./components/root";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useState } from "react";
+import { tokenContext } from "./assets/context/tokenContext";
+import SignIn from "./components/sign-in";
 import SignUp from "./components/sign-up";
-const root = document.querySelector('.root');
+const root = document.querySelector(".root");
 export default function App() {
-    return (
-        <BrowserRouter>
+  const [token, setToken] = useState(
+    JSON.parse(localStorage.getItem("token"))
+  );
+  return (
+    <BrowserRouter>
+      <tokenContext.Provider value={{ token, setToken }}>
         <Routes>
-            <Route path="/" element={<Root/>}/>
-            <Route path="/sign-in" element={<Login/>}/>
-            <Route path="/sign-up" element={<SignUp/>}/>
+          <Route
+            path="/"
+            element={
+              token ? <Navigate to="/home" /> : <Navigate to="/sign-in" />
+            }
+          />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
         </Routes>
-        </BrowserRouter>
-    )
+      </tokenContext.Provider>
+    </BrowserRouter>
+  );
 }
-reactDom.render(<App/>, root); 
+reactDom.render(<App />, root);
