@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function SignUp() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [submited,setSubmited] = useState(false);
-  const navigate = Navigate();
+  const navigate = useNavigate();
   async function SubmitForm(event) {
       event.preventDefault();
       setSubmited(true);
