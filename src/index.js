@@ -4,6 +4,7 @@ import { useState } from "react";
 import { tokenContext } from "./assets/context/tokenContext";
 import SignIn from "./components/sign-in";
 import SignUp from "./components/sign-up";
+import Home from "./components/home";
 const root = document.querySelector(".root");
 export default function App() {
   const [token, setToken] = useState(
@@ -21,6 +22,7 @@ export default function App() {
           />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/home" element={<Home/>}/>
         </Routes>
       </tokenContext.Provider>
     </BrowserRouter>

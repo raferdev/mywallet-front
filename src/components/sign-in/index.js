@@ -1,10 +1,12 @@
 import "./styles.css";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submited, setSubmited] = useState(false);
+  const navigate = useNavigate();
   async function submitForm(event) {
     event.preventDefault();
     setSubmited(true);
@@ -17,7 +19,9 @@ export default function SignIn() {
         .post("http://localhost:5000/sign-in", dados)
         .then((res) => {
           const token = res.data.token;
+          console.log(token);
           localStorage.setItem("token",JSON.stringify(token))
+          navigate("/home");
         })
         .catch((error) => {
           console.log(error);
