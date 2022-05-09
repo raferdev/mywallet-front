@@ -65,7 +65,7 @@ export default function Home() {
       },
     };
     try {
-      await axios.get("https://my-wallet-project-backend.herokuapp.com/logout", config).then(res=>{
+      await axios.get("https://my-wallet-project-backend.herokuapp.com/home/logout", config).then(res=>{
         localStorage.removeItem("token");
         navigate("/sign-in")
       })
