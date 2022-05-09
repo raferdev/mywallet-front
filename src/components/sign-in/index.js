@@ -19,11 +19,14 @@ export default function SignIn() {
         .post("http://localhost:5000/sign-in", dados)
         .then((res) => {
           const token = res.data.token;
-          console.log(token);
-          localStorage.setItem("token",JSON.stringify(token))
+          localStorage.setItem("token", JSON.stringify(token));
           navigate("/home");
         })
         .catch((error) => {
+          alert("Tivemos um problema ao envio! Tente novamente!");
+          setEmail("");
+          setPassword("");
+          setSubmited(false);
           console.log(error);
         });
     } catch (e) {
@@ -31,28 +34,42 @@ export default function SignIn() {
     }
   }
   return (
-    <>
-      <h1>MyWallet</h1>
-      <form onSubmit={submitForm}>
-        <input
-          type="email"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value.toString())}
-          required
-          disabled={submited ? true : false}
-        />
-        <input
-          type="password"
-          placeholder="senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value.toString())}
-          required
-          disabled={submited ? true : false}
-        />
-        <button type="submit">Entrar</button>
-      </form>
-      <a href="/home">Primeira vez? Cadastre-se!</a>
-    </>
+    <main className="main-login ">
+      <article className="login">
+        <h1 className="h1-login">MyWallet</h1>
+        <form onSubmit={submitForm}>
+          <input
+            className="input-login"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value.toString())}
+            required
+            disabled={submited ? true : false}
+          />
+          <input
+            className="input-login"
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value.toString())}
+            required
+            disabled={submited ? true : false}
+          />
+          <div className="div-button">
+            <button
+              className="login-button"
+              type="submit"
+              disabled={submited ? true : false}
+            >
+              Entrar
+            </button>
+          </div>
+        </form>
+        <a className="linkSignUp" href="/sign-up">
+          Primeira vez? Cadastre-se!
+        </a>
+      </article>
+    </main>
   );
 }

@@ -5,6 +5,8 @@ import { tokenContext } from "./assets/context/tokenContext";
 import SignIn from "./components/sign-in";
 import SignUp from "./components/sign-up";
 import Home from "./components/home";
+import NewDep from "./components/newDep";
+import NewPay from "./components/newPay";
 const root = document.querySelector(".root");
 export default function App() {
   const [token, setToken] = useState(
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/home" element={<Home/>}/>
+          <Route path="/home/new-deposit" element={<NewDep/>} />
+          <Route path="/home/new-payment" element={<NewPay/>}/>
         </Routes>
       </tokenContext.Provider>
     </BrowserRouter>
