@@ -16,7 +16,7 @@ export default function SignIn() {
     };
     try {
       await axios
-        .post("http://localhost:5000/sign-in", dados)
+        .post("https://my-wallet-project-backend.herokuapp.com/sign-in", dados)
         .then((res) => {
           const token = res.data.token;
           localStorage.setItem("token", JSON.stringify(token));

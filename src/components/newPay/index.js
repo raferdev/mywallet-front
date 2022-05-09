@@ -22,7 +22,7 @@ export default function NewPay() {
     };
     try {
       await axios
-        .post("http://localhost:5000/home/new-payment", body, config)
+        .post("https://my-wallet-project-backend.herokuapp.com/new-payment", body, config)
         .then((res) => {
           navigate("/home");
         })

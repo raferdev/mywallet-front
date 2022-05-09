@@ -19,7 +19,7 @@ export default function Home() {
       };
       try {
         await axios
-          .get("http://localhost:5000/home", config)
+          .get("https://my-wallet-project-backend.herokuapp.com/home", config)
           .then((res) => {
             const profile = res.data;
             setNome(profile.name);
@@ -43,7 +43,7 @@ export default function Home() {
       };
       try {
         await axios
-          .get("http://localhost:5000/home/logs", config)
+          .get("https://my-wallet-project-backend.herokuapp.com/logs", config)
           .then((res) => {
             const logsData = res.data;
             setLogs(logsData);
@@ -65,7 +65,7 @@ export default function Home() {
       },
     };
     try {
-      await axios.get("http://localhost:5000/logout", config).then(res=>{
+      await axios.get("https://my-wallet-project-backend.herokuapp.com/logout", config).then(res=>{
         localStorage.removeItem("token");
         navigate("/sign-in")
       })

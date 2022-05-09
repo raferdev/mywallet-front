@@ -27,7 +27,7 @@ export default function SignUp() {
     };
     try {
       await axios
-        .post("http://localhost:5000/sign-up", body)
+        .post("https://my-wallet-project-backend.herokuapp.com/sign-up", body)
         .then((res) => {
           navigate("/sign-in");
         })
