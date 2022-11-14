@@ -1,12 +1,16 @@
 * {
     box-sizing: border-box;
 }
-html,body {
+html,body,.root {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: #8C11BE;
+}
+
+.root {
+    padding: 10px;
 }
 a{
     text-decoration: none !important;
