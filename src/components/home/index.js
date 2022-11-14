@@ -44,7 +44,7 @@ export default function Home() {
       };
       try {
         await axios
-          .get("https://my-wallet-project-backend.herokuapp.com/home/logs", config)
+          .get(`${HTTP}home/logs`, config)
           .then((res) => {
             const logsData = res.data;
             setLogs(logsData);
