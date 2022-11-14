@@ -2,6 +2,7 @@ import "./../newDep/styles.css"
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { HTTP } from "../../assets/config/http.js";
 export default function NewPay() {
   const [type, setType] = useState();
   const [value, setValue] = useState();
@@ -22,7 +23,7 @@ export default function NewPay() {
     };
     try {
       await axios
-        .post("https://my-wallet-project-backend.herokuapp.com/home/new-payment", body, config)
+        .post(`${HTTP}new-payment`, body, config)
         .then((res) => {
           navigate("/home");
         })

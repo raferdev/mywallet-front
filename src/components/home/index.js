@@ -5,6 +5,7 @@ import {ReactComponent as LogoutSvg} from "./../../assets/svg/logout.svg"
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { HTTP } from "../../assets/config/http.js";
 export default function Home() {
   const [nome, setNome] = useState("");
   const [logs, setLogs] = useState([]);
@@ -19,7 +20,7 @@ export default function Home() {
       };
       try {
         await axios
-          .get("https://my-wallet-project-backend.herokuapp.com/home", config)
+          .get(`${HTTP}home`, config)
           .then((res) => {
             const profile = res.data;
             setNome(profile.name);

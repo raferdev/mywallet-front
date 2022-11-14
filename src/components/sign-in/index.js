@@ -2,6 +2,7 @@ import "./styles.css";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { HTTP } from "../../assets/config/http.js";
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +17,7 @@ export default function SignIn() {
     };
     try {
       await axios
-        .post("https://my-wallet-project-backend.herokuapp.com/sign-in", dados)
+        .post(`${HTTP}sign-in`, dados)
         .then((res) => {
           const token = res.data.token;
           localStorage.setItem("token", JSON.stringify(token));
