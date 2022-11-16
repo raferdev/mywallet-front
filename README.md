@@ -14,10 +14,13 @@
 </div>
 
 ---
+<p align="center">
+ <img width=auto height=auto src="./readme-banner.png" alt="Project logo">
+</p>
 
+--- 
 <p align="center"> 
-
-This is a backend project without complex architeture, its created to serve the frontend project which you can see <a href="https://github.com/raferdev/batepapo-uol">here</a>, and its a pratice into express world using middlewares, JOI to verify schemas and more. 
+This is a frontend part of FullStack project. The backend you can see <a href="https://github.com/raferdev/mywallet-back">here</a>. This project was built using ReactJS, and simulate one wallet service, which user can register payments, transactions, and see your account history.
 </p>
 
 ---
@@ -34,7 +37,7 @@ This is a backend project without complex architeture, its created to serve the 
 
 ## 🧐 About <a name = "about"></a>
 
-This project is used to generate one simple online chat, which store participants, messages and logs. It's serve the <a href="https://github.com/raferdev/batepapo-uol">frontend</a> and can verify the body of requests to maintain the business rules.
+This project was built on one week and encrease my consepts about javascript enviroment, using ReactJS, and NodeJS to create one web app completly. This frontend simulate one web app that user can create one account and register acount transactions.You can clone and run the project on your machine but backend is required <a href="https://github.com/raferdev/mywallet-back">(link)</a>.
 
 ---
 
@@ -82,8 +85,7 @@ You can rename the ".env.exemple" file to ".env", just removing ".exemple" and s
 
 
  ```
-MONGO_URI=mongodb://mongodb:27017/
-PORT_HOST=5000
+REACT_APP_HTTP=http://localhost:5000/
 ```
 You can change the values of variables if you want or need.
 
@@ -188,7 +190,7 @@ Valid types: ["message", "private_message"].
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [NodeJS](https://nodejs.org/en/docs/) - Backend Language
+- [ReactJS](https://pt-br.reactjs.org/) - Super Library Javascript
 - [Express](https://expressjs.com/pt-br/) - Node Framework
 - [Docker](https://www.docker.com/) - Container Technology
 
