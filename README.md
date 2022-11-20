@@ -180,7 +180,6 @@ can do on this page.
 
   **Usage** 
   - On all frontend access you will use GET method, it's just copy and paste the route on browser or use by clicking on the buttons and links. In this case you will make a request on *http://localhost:3000/signin* to see and interact with the page using by the above instructions.
-  
   ---
 
 **LET'S GO** - API description.
@@ -189,59 +188,136 @@ can do on this page.
 
     <img align="right"  src="./readme/signin.png" height="400px"/>
 
-    ```
-    INPUT:
-    - Email = If you have a 
+```
+INPUT:
+    - "Email" = If you have a 
     valid registered email 
     you can put here.
-    - Password = If you have one 
+    - "Senha" = If you have one 
     registered email you can put
     the respective password here.
 
-    BUTTON:
+BUTTON:
     - "Entrar": Send request to 
     signin when you put one email
     and password.
 
-    LINK:
+LINK:
     - "Primeira vez?
        Cadastre-se!": 
     Here you can use if you won't
     have one
     registered accont yet (your 
     fisrt time using the app)
-    ```
----
+```
+
 - **/sign-up**
 
-    <img align="right"  src="./readme/signup.png" height="400px"/>
+<img align="left"  src="./readme/signup.png" height="400px"/>
 
-    ```
+```
     INPUT:
-    - Name = Put your name here.
+    - "Nome" = Put your name.
     - Email = Put your email.
-    - Password = .
+    - "Senha" = Put your password.
+    - "Confirme sua senha" = 
+        confirm your password.
 
     BUTTON:
-    - "Entrar": Send request to 
-    signin when you put one email
-    and password.
+    - "Cadastrar" = Send request
+    to signup when you put name,
+    email and password.
 
     LINK:
-    - "Primeira vez?
-       Cadastre-se!": 
-    Here you can use if you won't
-    have one
-    registered accont yet (your 
-    fisrt time using the app)
-    ```
+    - "Já tem uma conta?
+     Entre agora!" =
+    Here you can use if you
+    have one registered accont.
+
+```
+
+- **/home** (only logged)
+
+<img align="right"  src="./readme/logs.png" height="400px"/>
+
+```
+BUTTON:
+    - "Nova Entrada" = Send to 
+    new-deposit page.
+    - "Nova Saida" = Send to 
+    new-payment page.
+    - Logout = On the top right of
+    page using icon, you can click
+    to return to sign-in page.
+
+LINK:
+    - "Já tem uma conta?
+     Entre agora!" =
+    Here you can use if you
+    have one registered accont.
+
+OVERVIEW:
+    - Here you can see the wallet
+    extract. "Saldo" meaning
+    something like "balance".
+
+```
+
+- **/new-deposit** (only logged)
+
+<img align="left"  src="./readme/entries.png" height="400px"/>
+
+```
+INPUT:
+    - "Valor" = You can put one
+    integer number of deposit.
+    - "Descrição" = You can 
+    describe the transaction.
+    (min 3 letters)
+    - "Salvar Entrada" = You will
+    save the transaction log.
+
+LINK:
+    - "Já tem uma conta?
+     Entre agora!" =
+    Here you can use if you
+    have one registered accont.
 
 
 
 
-<div>
-<img align="left" height="500px" src="./readme/signin.png"/>
-</div>
+```
+- **/new-payment** (only logged)
+
+<img align="right"  src="./readme/payments.png" height="400px"/>
+
+```
+INPUT:
+    - "Valor" = You can put one
+    integer number of payment.
+    - "Descrição" = You can 
+    describe the transaction.
+    (min 3 letters)
+    - "Salvar Entrada" = You will
+    save the transaction log.
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+---
+
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>

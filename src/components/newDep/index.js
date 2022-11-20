@@ -54,7 +54,7 @@ export default function NewDep() {
           placeholder="Descrição"
           value={type}
           onChange={(e) => setType(e.target.value)}
-          minLength="10"
+          minLength="3"
           required
           disabled={submited ? true : false}
         ></input>

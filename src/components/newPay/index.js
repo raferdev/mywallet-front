@@ -51,6 +51,7 @@ export default function NewPay() {
         className="input-new"
           type="type"
           placeholder="Descrição"
+          minLength="3"
           value={type}
           onChange={(e) => setType(e.target.value)}
           required

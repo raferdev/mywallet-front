@@ -12,7 +12,7 @@
     "ReactJS",
     "Axios",
     "Docker",
-    "Docker-compose",
+    "Docker-Compose",
     "Frontend"
   ],
   "author": "raferdev@outlook.com",
@@ -28,6 +28,7 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
+    "react:start":"react-scripts start",
     "start": "docker-compose up",
     "build": "docker-compose up --build",
     "test": "react-scripts test",
