@@ -8,4 +8,4 @@ COPY . .
 
 RUN npm ci
 
-CMD ["npm", "run react:start"]
+CMD ["npm", "run", "react:start"]

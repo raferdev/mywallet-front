@@ -28,10 +28,10 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "react:start":"react-scripts start",
     "start": "docker-compose up",
     "build": "docker-compose up --build",
     "test": "react-scripts test",
+    "react:start":"react-scripts start",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
