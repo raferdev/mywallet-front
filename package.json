@@ -1,7 +1,25 @@
 {
-  "name": "projeto13-mywallet-front",
-  "version": "0.1.0",
+  "name": "mywallet-front",
+  "version": "1.1.0",
   "private": true,
+  "description": "This is the frontend part of full stack project, mywallet, which is based on one financial control system.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raferdev/mywallet-front.git"
+  },
+  "keywords": [
+    "React",
+    "ReactJS",
+    "Axios",
+    "Docker",
+    "Docker-compose",
+    "Frontend"
+  ],
+  "author": "raferdev@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raferdev/mywallet-front/issues"
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "react": "^17.0.2",
@@ -10,8 +28,8 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "docker-compose up",
+    "build": "docker-compose up --build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

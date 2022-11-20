@@ -93,105 +93,161 @@ You can change the values of variables if you want or need.
 
 Use on terminal:
 ```
-npm run start
+npm start
 ```
-*The attached console will show "Hello i'm running on port = (PORT)" and after some mongodb logs.*
+*The attached console will show:*
+```
+Starting the development server...
+
+Compiled successfully!
+ 
+You can now view mywallet-front in the browser.
+
+Local:            http://localhost:3000
+On Your Network:  http://172.22.0.2:3000
+
+Note that the development build is not optimized.
+
+webpack compiled successfully
+```
 
 ---
 ## 🎈 Usage <a name="usage"></a>
 
-Now you will need one tool to make requests and interact whith your API. Some famous API Clients are <a href="https://insomnia.rest/download">Insomnia</a>, <a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder CLient</a> to VSCode users, <a href="https://www.postman.com/">Postman</a> and many others, like browsers plugins. If you dont use to complex jobs any of these will help you.
+Now you can access the route below on browser:
+
+```
+http://localhost:3000/
+```
 
 - **GUIDE** : 
 
-    **HTTP METHOD** - */route* -  Little description of it behaviour.
+    <img align="left"  src="./readme/signin.png" height="400px"/>
 
-  ```
-    Received or sended object schema.
-    Ex: {
-    "text":"Lorem ipsum..."
-    }
-  ```
-  *Final thoughts about API behaviour*
+   - **/route** - the path route did you can acess using your host
+
+```
+- Here you can see the
+description of what you 
+can do on this page.
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+---
+  **Exemple:**
+
+
+- **/sign-in**
+
+    <img align="right"  src="./readme/signin.png" height="400px"/>
+
+    ```
+    INPUT:
+    - Email = If you have a 
+    valid registered email 
+    you can put here.
+    - Password = If you have one 
+    registered email you can put
+    the respective password here.
+
+    BUTTON:
+    - "Entrar": Send request to 
+    signin when you put one email
+    and password.
+
+    LINK:
+    - "Primeira vez?
+       Cadastre-se!": 
+    Here you can use if you won't
+    have one
+    registered accont yet (your 
+    fisrt time using the app)
+
+    ```
 
   ---
-  Exemple:
 
-  **GET** - */health* - API return status 200 with object below.
-  ```
-  {
-    "message":"I'm Alive!"
-  }
-  ```
-  Simple way to verify if API is up. *Maybe is not implemented on this project*
-  
-  ---
-  **Usage** - In this case you will make a GET request on http://localhost:5000/health. And will receive the JSON object "message: I'm Alive!" on the console, terminal or display, depending on the case.
+  **Usage** 
+  - On all frontend access you will use GET method, it's just copy and paste the route on browser or use by clicking on the buttons and links. In this case you will make a request on *http://localhost:3000/signin* to see and interact with the page using by the above instructions.
   
   ---
 
 **LET'S GO** - API description.
 
-**POST** - */participants* - API verify existing users online with same name and, if don't have, includes user on mongoDB.
+- **/sign-in**
 
-```
-  {
-  "name":""
-  }
-```
-This route have setTimeout to verify activity, if user frontend dont send new requests in 10 seconds, this user are removed.
+    <img align="right"  src="./readme/signin.png" height="400px"/>
 
-**GET** - */participants* - API return one array with online users.
-```
-  [{
-   "name":"john"
-  },{
-   "name":"will"
-  },...]
-```
-**POST** - */messages* - Send message to API redirect for one user or all chat.
+    ```
+    INPUT:
+    - Email = If you have a 
+    valid registered email 
+    you can put here.
+    - Password = If you have one 
+    registered email you can put
+    the respective password here.
 
-HEADER:
-```
-{
-  "user":""
-}
-```
- BODY:
-```
-{
-  "to":"",
-  "text":"",
-  "type":""
-}
-```
-Valid types: ["message", "private_message"].
+    BUTTON:
+    - "Entrar": Send request to 
+    signin when you put one email
+    and password.
 
-"message": all users can see on chat.
-
-"private_message": only the one user you sended.
-
-**PUT** - */messages/:message_id* - User can edit the message, need id from mongoDB.
-
-```
-{
-  "to":"",
-  "text":"",
-  "type":""
-}
-```
-**DELETE** - */messages/:message_id* - User can delete the message.
-```
-{}
-```
-
-
+    LINK:
+    - "Primeira vez?
+       Cadastre-se!": 
+    Here you can use if you won't
+    have one
+    registered accont yet (your 
+    fisrt time using the app)
+    ```
 ---
+- **/sign-up**
+
+    <img align="right"  src="./readme/signup.png" height="400px"/>
+
+    ```
+    INPUT:
+    - Name = Put your name here.
+    - Email = Put your email.
+    - Password = .
+
+    BUTTON:
+    - "Entrar": Send request to 
+    signin when you put one email
+    and password.
+
+    LINK:
+    - "Primeira vez?
+       Cadastre-se!": 
+    Here you can use if you won't
+    have one
+    registered accont yet (your 
+    fisrt time using the app)
+    ```
+
+
+
+
+<div>
+<img align="left" height="500px" src="./readme/signin.png"/>
+</div>
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [ReactJS](https://pt-br.reactjs.org/) - Super Library Javascript
-- [Express](https://expressjs.com/pt-br/) - Node Framework
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - Style Language
 - [Docker](https://www.docker.com/) - Container Technology
 
 
